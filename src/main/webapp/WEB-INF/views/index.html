@@ -1,0 +1,30 @@
+<p th:text="${message}"></p>
+<a th:href="@{/documents/create-form}" th:text="'Create'"></a>
+<table>
+    <thead>
+    <tr>
+        <td>Code</td>
+        <td>Name</td>
+        <td>Year</td>
+        <td>Author</td>
+        <td>Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="document,stat : ${documentList}">
+        <td th:text="${document.code}"></td>
+        <td>
+            <a th:href="@{/documents/{id}/detail(id=${document.id})}" th:text="${document.name}"></a>
+        </td>
+        <td th:text="${document.year}"></td>
+        <td th:text="${document.author}"></td>
+        <td>
+            <a th:href="@{/documents/{id}/update-form(id=${document.id})}">Edit</a>
+        </td>
+        <td>
+            <a th:href="@{/documents/{id}/delete-form(id=${document.id})}">Delete</a>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
