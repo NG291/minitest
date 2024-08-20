@@ -1,13 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/layout :: head">
+    <title>CreateCustomer</title>
+</head>
+<body>
 <p th:text="${message}"></p>
 <a th:href="@{/documents/create-form}" th:text="'Create'"></a>
-<table>
+<table id="document">
     <thead>
     <tr>
         <td>Code</td>
         <td>Name</td>
         <td>Year</td>
         <td>Author</td>
-        <td>Action</td>
+        <td>Edit</td>
+        <td>Delete</td>
     </tr>
     </thead>
     <tbody>
@@ -28,3 +34,5 @@
     </tr>
     </tbody>
 </table>
+<footer th:replace="/layout :: footer"></footer>
+</body>

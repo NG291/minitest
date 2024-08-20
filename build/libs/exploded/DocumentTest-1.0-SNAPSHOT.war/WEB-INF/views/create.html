@@ -1,0 +1,54 @@
+<a th:href="@{/documents}">Back</a>
+<form th:action="@{save}" method="POST" th:object="${document}">
+    <input type="hidden" th:field="*{id}"/>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="code">Code</label>
+                </td>
+                <td>
+                    <input id="code" type="text" th:field="*{code}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Name</label>
+                </td>
+                <td>
+                    <input id="name" type="text" th:field="*{name}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="year">Year</label>
+                </td>
+                <td>
+                    <input id="year" type="number" th:field="*{year}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="description">Description</label>
+                </td>
+                <td>
+                    <textarea id="description" th:field="*{description}"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="author">Author</label>
+                </td>
+                <td>
+                    <input id="author" type="text" th:field="*{author}">
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <input type="submit" value="Save">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</form>

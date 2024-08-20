@@ -1,5 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/layout :: head">
+    <title>CreateCustomer</title>
+</head>
+<body>
 <a th:href="@{/documents}">Back</a>
-<table >
+<table id="document" >
     <tbody>
     <tr>
         <td>
@@ -43,3 +48,5 @@
     </tr>
     </tbody>
 </table>
+<footer th:replace="/layout :: footer"></footer>
+</body>

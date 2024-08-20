@@ -1,3 +1,8 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/layout :: head">
+    <title>CreateCustomer</title>
+</head>
+<body>
 <a th:href="@{/documents}">Back</a>
 <form th:action="@{/documents/update}" method="POST" th:object="${document}">
     <input type="hidden" th:field="*{id}"/>
@@ -51,3 +56,5 @@
         </tbody>
     </table>
 </form>
+<footer th:replace="/layout :: footer"></footer>
+</body>
